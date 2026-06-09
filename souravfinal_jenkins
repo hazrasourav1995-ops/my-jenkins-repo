@@ -1,0 +1,9 @@
+echo " this is my 2nd simple web server"
+sudo apt-get update
+sudo apt install docker.io apache2 -y
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl start apache2
+docker run -td --name myserver2 -p 8090:8090 jenkins/jenkins:latest
+sudo mkdir -p var/www/html
+echo " u do it sourav just believe in yourself" | sudo tee /var/www/html/index.html
